@@ -3,6 +3,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const refs = {
   galleryList: document.querySelector('.gallery'),
+  btnLoadMore: document.querySelector('.js-btn-load'),
 };
 
 export function createGallery(images) {
@@ -48,6 +49,12 @@ export function showLoader() {}
 
 export function hideLoader() {}
 
-export function showLoadMoreButton() {}
+export function showLoadMoreButton() {
+  refs.btnLoadMore.classList.remove('hidden');
+}
 
-export function hideLoadMoreButton() {}
+export function hideLoadMoreButton() {
+  refs.btnLoadMore.classList.add('hidden');
+}
+
+// export function checkBtnStatus() {}
