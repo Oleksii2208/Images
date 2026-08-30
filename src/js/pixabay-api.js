@@ -16,10 +16,11 @@ export async function getImagesByQuery(query, page) {
   });
 
   const url = `${BASE_URL}${END_POINT}?${params}`;
-  console.log(url);
+  // console.log(url);
 
   const res = await axios.get(url);
-  return res.data.hits;
+  return res.data;
+  // return res.data.hits;
 }
 
 // export function getImagesByQuery(query, page) {
