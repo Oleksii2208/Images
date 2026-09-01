@@ -3,14 +3,13 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const refs = {
   galleryList: document.querySelector('.gallery'),
-  btnLoadMore: document.querySelector('.js-btn-load'),
+  btnLoadMore: document.querySelector('.btn-loadMore'),
   loader: document.querySelector('.loader'),
 };
 
 // Дві функції для рендеру, для одного елементу та для масиву елементів
 
 export function createGallery(images) {
-  clearGallery();
   const markup = images.map(galleryTemplate).join('\n');
   refs.galleryList.insertAdjacentHTML('beforeend', markup);
   // refs.galleryList.innerHTML = markup;
@@ -45,11 +44,11 @@ function galleryTemplate(image) {
       width='360'
       height='200'
     />
-    <div>
-    <p>Likes${likes}</p>
-    <p>Views${views}</p>
-    <p>Comments${comments}</p>
-    <p>Downloads${downloads}</p>
+    <div class='image-info'>
+    <p><strong>Likes</strong>${likes}</p>
+    <p><strong>Views</strong>${views}</p>
+    <p><strong>Comments</strong>${comments}</p>
+    <p><strong>Downloads</strong>${downloads}</p>
     </div>
   </a>
 </li>

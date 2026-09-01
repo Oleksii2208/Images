@@ -2,14 +2,14 @@ import axios from 'axios';
 
 // використовую async/await
 
-export async function getImagesByQuery(query, page) {
+export async function getImagesByQuery(query, page, perPage) {
   const BASE_URL = 'https://pixabay.com';
   const END_POINT = '/api/';
   const params = new URLSearchParams({
     key: '56897880-ce564d0c5f2c9a99203aeddd2',
     q: query,
     page: page,
-    per_page: 15,
+    per_page: perPage,
     image_type: 'photo',
     orientation: 'horizontal',
     safesearch: true,
