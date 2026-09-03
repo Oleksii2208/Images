@@ -77,7 +77,7 @@ refs.btnLoadMore.addEventListener('click', () => {
 
   checkBtnStatus();
   showLoader();
-  getImagesByQuery(params.query, params.page).then(data => {
+  getImagesByQuery(params.query, params.page, params.perPage).then(data => {
     createGallery(data.hits);
     hideLoader();
   });
